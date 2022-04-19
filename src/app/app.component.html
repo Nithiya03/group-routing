@@ -1,11 +1,32 @@
 <h1>Group Routing</h1>
-<h3>Admin page</h3>
+<table>
+    <tr>
+      <th>Action</th>
+      <th>Login</th>
+     
+    </tr>
+    <tr>
+      <td>
+        <a md-button>Action List</a>
+            <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Item 1</button>
+              <button mat-menu-item>Item 2</button>
+            </mat-menu>
+      </td>
+      <!-- <td><li><a [routerLink]="['admin/action']">Admin Action</a></li></td>
+      <td><li><a [routerLink]="['admin/login']">Admin Login</a></li>  </td>   -->
+      <td>
+        <label for="cars">Login list</label>
+        <select name="cars" id="cars">
+          <option >Choose the option</option>
+          <option ><a [routerLink]="['admin/login']">Admin Login</a></option>
+          <option ><a [routerLink]="['user/login']">User Login</a></option>
+        </select>
+      </td>
+      <!-- <td><li><a [routerLink]="['user/action']">User Action</a></li></td>
+      <td><li><a [routerLink]="['user/login']">User Login</a></li>  </td> -->
+      </tr>
 
-<a routerLink="admin/action">action</a><br><br>
-<a routerLink="admin/login">Login</a>
-
-<h3>Userlogin</h3>
-<a routerLink="user/action">action</a><br><br>
-<a routerLink="user/action">Login</a>
-
+  </table>
 <router-outlet></router-outlet>
